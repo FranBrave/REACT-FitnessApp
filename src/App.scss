@@ -1,9 +1,16 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+
+
 body {
-  font-family: 'Josefin Sans';
+  font-family: 'Roboto', sans-serif;
   background-color: #FFFAFB;
+  font-weight: 700;
 }
 
 * {
+  font-weight: 700;
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;

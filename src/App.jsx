@@ -7,6 +7,8 @@ import ExerciseDetail from './pages/ExerciseDetail';
 import Home from './pages/Home';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import LoginForm from './components/LoginForm';
+import RegisterForm from './components/RegisterForm';
 
 const  App = () => {
   return (
@@ -15,6 +17,8 @@ const  App = () => {
       <Routes>
         <Route path='/' element={ <Home /> } />
         <Route path='/exercise/:id' element={ <ExerciseDetail />} />
+        <Route path='/login' element={ <LoginForm />} />
+        <Route path='/signup' element={ <RegisterForm/> } />
       </Routes>
       <Footer />
     </Box>

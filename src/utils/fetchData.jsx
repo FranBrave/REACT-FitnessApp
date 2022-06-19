@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 
 export const exerciseOptions = {
     method: 'GET',
@@ -24,3 +26,21 @@ export const fetchData = async (url, options) => {
         return data;
 
 }
+
+
+export const APIHeaders = {
+    'Accept': 'application/json',
+    'Content-Type': 'application/json',
+    'Access-Control-Allow-Origin': '*',
+    'Authorization': {
+        toString () {
+            return `Bearer ${localStorage.getItem('token')}`
+        }
+    }
+};
+
+export const API = axios.create({
+    baseURL: process.env.MONGO_DB,
+    timeout: 6000,
+    headers: APIHeaders
+});
